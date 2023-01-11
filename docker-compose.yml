@@ -1,0 +1,11 @@
+version: "3"
+services:
+  react:
+    image: node:18-bullseye-slim
+    container_name: react
+    volumes:
+      - ./front:/front
+    working_dir: /front
+    ports:
+      - "3000:3000"
+    tty: true
